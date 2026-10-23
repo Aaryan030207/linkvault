@@ -15,9 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // MongoDB Connection
-const MONGODB_URI =
-  process.env.MONGODB_URI ||
-  'mongodb+srv://aaryanbohra2007_db_user:hsGEsAw2GJFi5oer@cluster0.hljwi5w.mongodb.net/linkvault?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 const connectDB = async (retries = 5, delay = 3000) => {
   for (let attempt = 1; attempt <= retries; attempt++) {
