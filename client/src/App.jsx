@@ -386,7 +386,7 @@ export default function App() {
 
           {/* Form Error Message */}
           {formError && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem', color: '#f87171', fontSize: '0.875rem' }}>
+            <div className="form-error-banner">
               <AlertCircle size={16} />
               <span>{formError}</span>
             </div>
@@ -488,7 +488,7 @@ export default function App() {
       <section>
         <div className="dashboard-header">
           <div className="dashboard-title-group">
-            <BarChart3 size={24} color="#6366f1" />
+            <BarChart3 size={20} className="dashboard-title-icon" />
             <h2 className="dashboard-title">Links Dashboard</h2>
             <span className="links-count-pill">{links.length} total</span>
           </div>
@@ -608,7 +608,7 @@ export default function App() {
                             onClick={() => handleCopy(item.shortUrl, item.urlCode)}
                           >
                             {copiedId === item.urlCode ? (
-                              <Check size={15} color="#34d399" />
+                              <Check size={15} className="copied-check-icon" />
                             ) : (
                               <Copy size={15} />
                             )}
@@ -686,7 +686,7 @@ export default function App() {
               />
             </div>
 
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', color: '#38bdf8', marginBottom: '1.25rem', wordBreak: 'break-all' }}>
+            <div className="modal-url-display">
               {qrModalUrl}
             </div>
 
@@ -715,7 +715,7 @@ export default function App() {
       {/* Floating Toast */}
       {toastMessage && (
         <div className="toast">
-          <Sparkles size={16} color="#6366f1" />
+          <Sparkles size={16} className="toast-icon" />
           <span>{toastMessage}</span>
         </div>
       )}
