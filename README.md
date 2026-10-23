@@ -84,7 +84,7 @@ The backend environment file is located at `server/.env`:
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb+srv://aaryanbohra2007_db_user:hsGEsAw2GJFi5oer@cluster0.hljwi5w.mongodb.net/linkvault?retryWrites=true&w=majority
+MONGODB_URI=your_mongodb_connection_string
 BASE_URL=http://localhost:5000
 CLIENT_URL=http://localhost:5173
 ```
